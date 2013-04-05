@@ -1,0 +1,199 @@
+---
+sfGuardUser:
+  User_admin:
+    first_name:     Nicolas
+    last_name:      Viola
+    email_address:  nico.v.88@gmail.com
+    username:       admin
+    password:       admin
+    is_super_admin: true
+    Groups:         [Group_admin]
+  User_common1:
+    first_name:     Damian
+    last_name:      Rubio
+    email_address:  rubiodamian@hotmail.com
+    username:       user
+    password:       user
+    is_super_admin: false
+    Groups:         [Group_common]
+  User_common2:
+    first_name:     Javier
+    last_name:      Cardenas
+    email_address:  javi@hotmail.com
+    username:       javi
+    password:       javi
+    is_super_admin: false
+    Groups:         [Group_common]
+
+sfGuardGroup:
+  Group_admin:
+    name:           admin
+    description:    Administrator group
+    Permissions:    [Permission_admin]
+  Group_common:
+    name:           common
+    description:    Common group
+    Permissions:    [Permission_common]
+
+sfGuardPermission:
+  Permission_admin:
+    name:           admin
+    description:    Administrator permission
+  Permission_common:
+    name:           common
+    description:    Publicador de Podcast
+
+Category:
+  categoria1:
+    name: Rock
+  categoria2:
+    name: Pop
+  categoria3:
+    name: Electro    
+    
+Podcast:
+  Supertramp:
+    name: Supertramp
+    description: Supertramp es un grupo británico de rock progresivo que gozó de gran popularidad a finales de los años setenta y a comienzos de los 80.
+    image: supertramp.jpeg
+    contact: supertramp@host.com
+    visible: true
+    Category: categoria1
+    Owners: [User_common1]
+  RedHotChiliPeppers:
+    name: Red Hot Chili Peppers
+    description: Red Hot Chili Peppers es una banda estadounidense formada en 1983 en Los Ángeles, California.
+    image: red-hot-chili-peppers.jpeg
+    contact: redhotchilipeppers.com
+    visible: true
+    Category: categoria2
+    Owners: [User_common1, User_common2]
+  Molotov:
+    name: Molotov
+    description: Molotov es una banda de Rock alternativo formada el 23 de septiembre de 1995 en México D.F
+    image: molotov.jpeg
+    contact: molotov.mx
+    visible: true
+    Category: categoria3
+    Owners: [User_common2]
+  30SecondsToMars:
+    name: 30 Seconds to Mars
+    description: 30 Seconds to Mars (abreviado 30STM o TSTM) es una banda formada en Los Ángeles, California en 1998. 
+    image: 30-seconds-to-mars.jpeg
+    contact: 30STM.com
+    visible: true
+    Category: categoria1
+    Owners: [User_common1, User_common2]
+  Podcast5:
+    name: Podcast sin foto
+    description: no tiene foto, se reemplaza con una foto de "no photo"
+    contact: nophoto.com
+    visible: true
+    Category: categoria3
+    Owners: [User_common2]
+  Podcast6:
+    name: Podcast de relleno
+    description: podcast de relleno
+    contact: ninguno
+    visible: true
+    Category: categoria2
+  Podcast7:
+    name: Podcast de relleno
+    description: podcast de relleno
+    contact: ninguno
+    visible: true
+    Category: categoria2
+  Podcast20:
+    name: Podcast de relleno
+    description: podcast de relleno
+    contact: ninguno
+    visible: true
+    Category: categoria2
+  Podcast8:
+    name: Podcast de relleno
+    description: podcast de relleno
+    contact: ninguno
+    visible: true
+    Category: categoria2
+  Podcast9:
+    name: Podcast de relleno
+    description: podcast de relleno
+    contact: ninguno
+    visible: true
+    Category: categoria2
+  Podcast10:
+    name: Podcast de relleno
+    description: podcast de relleno
+    contact: ninguno
+    visible: true
+    Category: categoria2
+  Podcast11:
+    name: Podcast de relleno
+    description: podcast de relleno
+    contact: ninguno
+    visible: true
+    Category: categoria2
+    
+Episode:
+  Episode1:
+    description: School de Supertrmap, el mejor solo de piano de la historia.
+    title: School
+    archivo: school
+    Podcast: Supertramp
+  Episode2:
+    description: Brackfast in america.Tee maaa zooo!!
+    title:  Brackfast in america.
+    archivo: breackfastinamericas
+    Podcast: Supertramp
+  Episode3:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode4:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode5:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode6:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode7:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode8:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode9:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode10:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode11:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode12:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode13:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode14:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp
+  Episode15:
+    description: episodio vacio
+    title: Episodio vacio
+    Podcast: Supertramp

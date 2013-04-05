@@ -1,0 +1,61 @@
+pageconfig:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                pageconfig
+    module:               pageconfig
+    prefix_path:          /pageconfig
+    column:               id
+    with_wildcard_routes: true
+
+episode:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                episode
+    module:               episode
+    prefix_path:          /episode
+    column:               id
+    with_wildcard_routes: true
+
+sfGuardUser:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfGuardUser
+    module:               sfGuardUser
+    prefix_path:          /user
+    column:               id
+    with_wildcard_routes: true
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+podcast:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                podcast
+    module:               podcast
+    prefix_path:          /podcast
+    column:               id
+    with_wildcard_routes: true
+
+category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                category
+    module:               category
+    prefix_path:          /category
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: podcast , action: index }
+

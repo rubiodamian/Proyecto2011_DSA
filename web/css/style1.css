@@ -1,0 +1,555 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	
+	Eric Meyer					:: http://ericmeyer.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+	
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+ 
+
+.last { margin-right:0 !important;}
+
+
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+
+/* using local fonts? make sure to read up on Paul Irish's 
+	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* we like off-black for text */
+body, select, input, textarea {color: #333;}
+
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+
+
+body {
+  font-family: Helvetica;
+  background: #3f3f3f url(../images/gk-bg-dark.png);
+  width: 100%;
+  height: 100%;
+}
+
+#pagewidth{ 
+  width:74.181em; 
+  text-align:left; 
+  margin:0 auto; 
+} 
+
+#header{
+  position:relative; 
+  height: 15em;
+  width: auto;
+  background: #222 url(../images/gk-bg-light.png);
+} 
+
+#leftcol{
+  width:10em; 
+  float:left; 
+  position:relative; 
+}
+
+#maincol{
+  background: #666  url(../images/gk-bg-medium.png);
+  position: relative; 
+  width:64.1em;
+  float:left; 
+  height:100%;
+}
+
+#footer{
+  height:5em; 
+  background: #222 url(../images/gk-bg-light.png); 
+  clear:both;
+  display:block;
+}
+
+#podcastcontainer{
+  padding: 1em;
+}
+
+.logbutton a {
+  color: white;
+  float:right;
+  background: #3f3f3f;
+  padding: 0.3125em 0.4375em;
+  border-left: 0.1875em solid #0DF;
+  text-decoration: none;
+}
+
+.logbutton  a:hover
+{
+  background:#0DF;
+}
+
+#title{
+  margin:0;
+  color:white;
+  font-family: Helvetica;
+  color: white;
+  font-size: 10em;
+  letter-spacing: -0.15em;
+  font-weight: bold;
+  text-decoration:none;
+}
+/*menu style*/
+
+.menu-div ul
+{
+  padding:0em;
+  margin:0em;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:0.9375em;
+  color:#FFF;
+  list-style:none;
+  text-indent:0.9375em;
+}
+.menu-div  li
+{
+  background:#3f3f3f;
+  line-height:2.5em;
+  border-bottom:0.0625em solid #333;
+}
+.menu-div ul li a
+{
+  text-decoration:none;
+  color:#FFF;
+  display:block;
+}
+.menu-div ul li a:hover
+{
+  background:#0DF;
+}
+.menu-div ul li.active
+{
+  background:#0DF;
+}
+
+.musicbox {
+
+  border-left: 0.3125em solid #0DF;
+  background: #111;
+}
+
+.musicbox p {
+  margin:0;
+  color: white;
+  font-family: Helvetica;
+
+}
+
+#caracteristicas p{
+  margin: 0.1em 1em 0.5em 0em; 
+}
+
+.imagen{
+  margin: 0.5em 0.5em 0.5em 0em; 
+  height: 84px;
+  width: 84px;
+  float: left;
+}
+.musicbox .play {
+  margin: 0.5em 0em 0.5em 0em; 
+  height: 84px;
+  width: 84px;
+  float:left;
+
+}
+
+li.musiclistitem{
+  display: block;
+  float: left;
+  margin: 0.3125em 0.625em 0.3125em 0.625em;  
+}
+/*Listado de episodes*/
+ul.episode_listado li { float:left; width:220px; margin:0 20px 20px 0;}
+ul.episode_listado li a.producto_img { display:block; width:84px; margin: auto }
+ul.episode_listado li .producto_info { height:110px; float: right}
+ul.episode_listado li h3 a { width:203px; background-color:#444; border-left:1px solid #666; border-right:1px solid #444; border-bottom:1px solid #666; padding:5px 5px 5px 10px; color:#0DF; font-family:'Ropa sans'; font-size:1.33em; line-height:16px; display:block; text-decoration: none;}
+
+/*Listado de podcast*/
+ul.productos_listado li { float:left; width:220px; margin:0 20px 20px 0;}
+ul.productos_listado li a.producto_img { display:block; width:218px; height:148px;}
+ul.productos_listado li .producto_info { height:110px;}
+ul.productos_listado li h3 a { width:203px; background-color:#444; border-left:1px solid #666; border-right:1px solid #444; border-bottom:1px solid #666; padding:5px 5px 5px 10px; color:#0DF; font-family:'Ropa sans'; font-size:1.33em; line-height:16px; display:block; text-decoration: none;}
+ul.productos_listado li p.producto_cod { width:107px; padding:3px 3px 3px 10px; height:14px; background-color:#444; float:left; font-size:0.9em;}
+ul.productos_listado li a.btn_amarillo { width:68px; height:18px; line-height:18px; float:left;}
+/*musicboxPlayer*/
+
+.musicboxPlayer{
+  margin: auto;
+  height:16em;
+  /*width: 20em;*/
+  border-left: 0.3125em solid #0DF;
+  background: #111;
+  padding:2.5em;
+  color:white;
+
+}
+
+.musicboxPlayer .imagen{
+  width: 200px;
+  height: 200px;
+
+
+}
+.videoBoxPlayer{
+    width: 200px;
+  height: 200px;
+
+    
+}
+
+/*back-end style*/
+select{
+
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: bold;
+  font-size:0.875em;
+
+  border-left-width:thin;
+  border-left-color:#000000;
+  border-top-width:thin;
+  border-top-color:#000000;
+
+}
+
+#logout{
+  float:right;
+}
+/*login style*/
+#formularioWrapper{
+  margin: auto;
+  height:12.5em;
+  width: 18.75em;
+  border-left: 0.3125em solid #0DF;
+  background: #111;
+  padding: 0.3125em 0em 0.3125em 0em;
+}
+.formInput{
+  float: left;
+}
+
+#formLabel{
+  float: left;
+}
+
+#formularioWrapper p{
+  margin: auto;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  font-size: 1em;
+  float:left;
+}
+#login{
+  color: white;
+  width: 18.75em;
+  height: 6.25em;
+}
+/*messagebox*/
+.messagebox{
+  position:absolute;
+  width:100px;
+  margin-left:30px;
+  border:1px solid #c93;
+  background:#ffc;
+  padding:3px;
+  color:#CC0000;
+}
+
+.messageboxok{
+  position:absolute;
+  width:auto;
+  margin-left:30px;
+  border:1px solid #349534;
+  background:#C9FFCA;
+  padding:3px;
+  font-weight:bold;
+  color:#CC0000;
+
+}
+.messageboxerror{
+  position:absolute;
+  width:auto;
+  margin-left:30px;
+  border:1px solid #CC0000;
+  background:#F7CBCA;
+  padding:3px;
+  font-weight:bold;
+  color:#CC0000;
+}
+
+.loading{
+
+  margin:0;
+  padding:0;
+  display: block;
+
+
+}
+
+.tituloPodcast{
+    float:left;
+    font-weight: bold ;    
+}
+.episodesLink{
+ color : #000000;
+ font-family:  sans-serif;
+  
+}
+
+.podImagen{
+   
+   margin:20px;
+    
+}
+.content{
+/*  float: right;*/
+  color: white;
+}
+
+#contentcontainer{
+  margin: auto;
+  width: 26.3125em;
+}
+
+#contentcontainer ul{
+  margin: auto;
+  padding: 0;
+}
+
+.contentbox {
+  height:1.5em;
+  border-left: 0.3125em solid #0DF;
+  background: #111;
+  padding:0.5em;
+  width: 25em;
+  border-bottom: 0.09em solid #0DF;
+}
+
+.contentbox p {
+  margin:0;
+  color: white;
+  font-family: Helvetica;
+  float: left;
+}
+
+li.contentlistitem{
+  display: block;
+  margin: 0.3125em 0em 0.3125em 0em;  
+}
+
+img.pager{
+   vertical-align:middle;
+}
+
+.pagination { width:480px; height:30px;}
+.pagination ul { float:right;}
+.pagination ul li { float:left;  color:#0DF; text-align:center; line-height:20px; height:20px; width:20px; margin-right:5px;}
+.pagination ul li.no_link { background-color:#0DF; color:#FFF;}
+.pagination ul li a { display:block; color:#3f3f3f; background-color:#EEE; width:20px; height:20px;}
+.pagination ul li a:hover { text-decoration:none; color:white; background-color:#0DF;}
+.pagination ul li.nav {  /*background:-webkit-gradient(linear, 11% 100%, 10% 21%, from(#CCC), to(#EEE));*/ background:url(../images/btn-gradient.gif) repeat-x; border-radius:3px;   }
+.pagination ul li.next { }
+.pagination ul li.nav a { text-indent:-99999px; background:url(../images/iconos/nav_arrow.gif) no-repeat; width:18px; }
+.pagination ul li.left { border-left:2px solid #0DF;}
+.pagination ul li.right { border-right:2px solid #0DF;}
+.pagination ul li.nav a#first { background-position:0 -140px;}
+.pagination ul li.nav a#prev { background-position:0 -60px;}
+.pagination ul li.nav a#last { background-position:0 -100px;}
+.pagination ul li.nav a#next { background-position:0 -20px;}
+.pagination ul li.nav a#first:hover { background-position:0 -120px;}
+.pagination ul li.nav a#prev:hover { background-position:0 -40px;}
+.pagination ul li.nav a#last:hover { background-position:0 -80px;}
+.pagination ul li.nav a#next:hover { background-position:0 0;}
+.pagination_desc { float:left; font-style:italic;}
+.pagination a, a:active { outline:none; cursor:pointer; }
+.pagination a { color:#222965; text-decoration:none; }
+.pagination a:hover { text-decoration:underline; color:#61996A }
+.pagination ol, ul { list-style:none; }
+
+.search{
+    float: right
+}
+
+.search input{
+    float: left;
+}
+
+.search h2{
+    float: left;
+    color: white;
+}
+
+p#menuHuellas { font-size: 0.92em; margin:3px 0 10px; color:#0DF }
+p#menuHuellas a { font-weight:bold; color: blue }
+p#menuHuellas a:hover { text-decoration:none; color:#0DF }
+
+div#content { width:460px; float:left; margin:20px ;}
+
+div#content h2 { font-family:'Ropa sans'; font-size:2.18em; color:#0DF; margin-bottom:20px;}
+#producto_desc { width:460px; margin-right:20px; float:left; margin-bottom:20px; color:white; font-size:1.1em;}
+h3.content_subtitulo { font-family:'Ropa sans'; color:#0DF; border-bottom:1px solid #0DF; padding-bottom:5px; font-size:1.27em; margin-bottom:15px; display:block;}
+a.content_subtitulo { font-family:'Ropa sans'; color:#0DF; border-bottom:1px solid #0DF; padding-bottom:5px; font-size:1.63em; margin-bottom:15px; display:block;}
+
+div#sf_admin_container h1 { font-family:'Ropa sans'; font-size:2.18em; color:#0DF; margin-bottom:20px;} 
+
+
+.frmAdmin { margin-bottom:20px;width: 542px; margin: auto;}
+.frmAdmin_full { width:700px}
+.frmAdmin fieldset { width:auto;}
+.frmAdmin legend {  left:-2px; font-weight:bold; color:#61996a; font-size:1.33em; border-bottom:1px solid #ccc; width:100%; float:left; padding:0; padding-bottom:3px !important; margin:10px 0; }
+.frmAdmin .form_row { min-height:30px; height:auto!important; height:30px; margin-bottom:10px; }
+.frmAdmin .form_row span { color:#666; font-size:.92em; font-style:italic; line-height:18px; padding:2px 0 0 10px; display:inline-block }
+.frmAdmin label { float:left; width:100px; font-weight:bold; line-height:30px;  color:#222965; }
+.frmAdmin select { float:left; padding:4px; height:30px; width:386px; border:1px solid #CCC; border-radius:5px; line-height:30px;}
+.frmAdmin .campo { float:left; width:372px; height:24px; padding:2px 6px; border:1px solid #CCC; border-radius:5px; line-height:24px;  }
+.frmAdmin .campo_largo { width:270px; }
+.frmAdmin textarea { width:530px; height:120px; }
+.frmAdmin ul.error_list { color: #D8000C;  font-size:.92em!important; padding-left: 145px; width:384px; margin-top:3px; float: none!important; }
+.frmAdmin ul.error_list li {}
+.frmAdmin p.form_help { color:#666; font-style: italic; font-size:.92em!important; padding-left: 145px; width:384px; margin-top: 3px}
+.frmAdmin ul { font-size:.92em; float:left; }
+.frmAdmin #bt_ingresar, .frmAdmin #bt_regitrar { float:right; }
+.frmAdmin .btn { margin-right: 10px; display:inline; cursor:pointer}
+.frmAdmin p.info { margin-top:20px; font-size:.92em; color:#666; padding-left:20px; background:url(../images/iconos/information.png) no-repeat; margin-left:180px }
+
+/*---enlaces y submit---*/
+#login_links { float:left; margin:10px 0 0 145px;}
+.btn_mod { float:left !important; margin-left:0;}
+/*---Botones Editar, Registrar---*/
+.btn { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; cursor:pointer; padding:0px 6px; width:auto; height:24px; line-height:24px; font-size:1em; 
+/*background:-webkit-gradient(linear, 10% 100%, 10% 21%, from(#CCC), to(#EEE));*/ background:url(../images/btn-gradient.gif) repeat-x;
+border:1px solid #CCC; border-radius:3px; display:inline-block;  text-align:center; margin-top:5px; color:#333; float:right; overflow:visible; }
+.btn:hover { background:url(../images/btn-hover-gradient.gif) repeat-x;  text-decoration:none; color:#61996A;}
+.forgot_password { position:relative; top:-42px; right:40px;}
+
+#usuarioRegistrado, #login { padding:10px; margin-top:15px; background:#F0EFEC; border-radius:5px;  }
+#frmLogin fieldset { position:relative; }
+#frmLogin legend { position:relative; margin:0px 0 10px -5px; font-size:1.19em; font-weight:bold; padding-bottom:3px; border-bottom:1px solid #999 }
+#frmLogin .form_row { min-height:17px; height:auto!important; height:17px; padding:5px 0;}
+#frmLogin label { float:left; width:70px; font-size:.92em; font-weight:bold; line-height:22px; }
+#frmLogin .campo { float:left; width:100px; padding:0 4px; height:20px; border-radius:5px;  border:1px solid #CCC; font-size: .92em; line-height: 20px; }
+#frmLogin ul { font-size:.92em; float:left; margin-top:5px; }
+label.no_close_session { padding-left: 145px; font-weight: normal!important;}
+label.no_close_session input { margin-top: 3px;}
+#frmAviso label, #frmDatos label, #frmPass label { width:200px; }
+#frmAviso .botones, #frmDatos .botones, #frmPass .botones { float:right; margin:10px 0 0 0 }
+#frmAviso p.info, #frmDatos p.info { margin:20px auto 0 auto; width:400px; }
+#frmAviso .checkbox { width:20px; border:none; }
+.frmUser { padding:15px 15px 10px 15px; background-color:#EEE; border-radius:5px; }
+.frmUser fieldset {  width:540px; margin:0 auto;}
+.frmAdmin ul.radio_list { margin-top:5px;}
+.frmAdmin ul.radio_list li { margin-right:20px; float:left; height:16px;}
+.frmAdmin ul.radio_list li label { width:60px !important; line-height:16px !important;}
+.frmAdmin ul.radio_list li input { float:left; margin-right:5px; }
+/*---enlaces y submit---*/
+#login_links { float:left; margin:10px 0 0 145px;}
+.btn_mod { float:left !important; margin-left:0;}

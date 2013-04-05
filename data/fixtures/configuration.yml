@@ -1,0 +1,18 @@
+## YAML Template.
+---
+PageConfig:
+  Style:
+    config: style
+    value: style1
+  PageTitle:
+    config: pagetitle
+    value: Podcast
+  PodcastPerPage:
+    config: podcastperpage
+    value: 8
+  VisiblePodcast:
+    config: visiblepodcast
+    value: 10
+  UnavailableSite:
+    config: unavailablesite
+    value: false

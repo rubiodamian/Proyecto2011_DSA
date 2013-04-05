@@ -1,0 +1,41 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+# default rules
+unavailable:
+  url:      /unavailable
+  param:    { module: unavailable, action: index }
+  
+homepage:
+  url:   /
+  param: { module: home, action: index }
+
+podcast:
+  url:   /:category_slug/:name_slug/:id
+  class:   sfDoctrineRoute
+  options: { model: Podcast, type: object}
+  param: { module: podcast, action: index }
+    
+episode:
+  url:   /:category_slug/:podcast_slug/:title_slug/:id
+  class:   sfDoctrineRoute
+  options: { model: Episode, type: object}
+  param: { module: episode, action: index }
+    
+podcast_search:
+  url:   /search
+  param: { module: home, action: search }   
+  
+category:
+  url:   /:name_slug
+  class:   sfDoctrineRoute
+  options: { model: Category, type: object, method: selectMethod}
+  param: { module: home, action: category }
+  
+rss:
+  url:   /podcast/:id/:name_slug/rss.:sf_format
+  class:   sfDoctrineRoute
+  param: { module: rss, action: index, sf_format: html }
+  options: { model: Podcast, type: object }
+  requirements:
+    id: \d+
+    sf_format: (?:html|atom)
