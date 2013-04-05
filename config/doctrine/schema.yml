@@ -1,0 +1,116 @@
+---
+detect_relations: true
+
+Podcast:
+  actAs: [Timestampable]
+  columns:
+    id:
+      primary: true
+      autoincrement: true
+      type: integer
+    name: 
+      type: string(255)
+      notblank: true
+      notnull: true
+    slug:
+      type: string(255)
+    description: text
+    image: 
+      type: string(255)
+      nospace: true
+      notnull: false
+    contact: string(255)
+    visible: boolean
+    visitCount: 
+      type: integer
+      default: 0
+    Category_id:
+      type: integer
+  relations:
+    Owners:
+      class: sfGuardUser
+      local: Podcast_id
+      foreign: sfGuardUser_id
+      refClass: Owner
+      foreignAlias: Podcasts
+      onDelete: CASCADE
+    Categorys:
+      class: Category
+      local: Category_id
+      foreign: id
+      onDelete: CASCADE
+      
+Episode:
+  actAs: [Timestampable]
+  columns:
+    id:
+      primary: true
+      autoincrement: true
+      type: integer
+    description: 
+      type: text
+    title: 
+      type: string(255)
+      notblank: true
+      notnull: true
+    slug:
+      type: string(255)
+    archivo:
+      type: string(255)
+      notblank: true
+      notnull: true
+      nospace: true
+    Podcast_id:
+      type: integer
+  relations:
+    Podcast:
+      class: Podcast
+      local: Podcast_id
+      onDelete: CASCADE
+      
+      
+
+Owner:
+  columns:
+    sfGuardUser_id:
+      primary: true
+      type: integer
+    Podcast_id:
+      primary: true
+      type: integer
+  relations:
+    User:
+      foreignAlias: Owners
+      class: sfGuardUser
+      local: sfGuardUser_id
+      onDelete: CASCADE
+    Podcast:
+      foreignAlias: Owners
+      class: Podcast
+      local: Podcast_id
+      onDelete: CASCADE
+      
+Category:
+  columns:
+    id:
+      primary: true
+      autoincrement: true
+      type: integer
+    name: 
+      type: string(255)
+      notblank: true
+      notnull: true
+    slug:
+      type: string(255)
+      
+PageConfig:
+  columns:
+    id:
+      primary: true
+      autoincrement: true
+      type: integer
+    config: 
+      type: string(255)
+    value: 
+      type: string(255)    
+  

@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           podcast
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          podcast
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      fields:
+        id: 
+          credentials: [admin]
+        created_at:
+          label: Created at
+        visitCount:
+          label: Visit count
+      list:
+        title:   Podcast list
+        display: [=name, created_at, Category, visitCount]
+        table_method: getPodcastOfUser
+      filter:  ~
+      form:    
+        display:
+          "Podcast":  [name, description, image, contact, visible, Category_id, owners_list]
+      edit:
+        title: Editing Podcast "%%name%%"
+      new:     ~

@@ -1,0 +1,30 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           episode
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          episode
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      fields:
+        id: 
+          credentials: [admin]
+        created_at:
+          label: Created at
+      list:
+        title:   Episode list
+        display: [=title, created_at, description, =Podcast]
+        table_method: getEpisodesOfUser
+      filter:  ~
+      form:    
+        display:
+          "Episode":  [title, description, Podcast_id, archivo]
+      edit:
+        title: Editing Episode "%%title%%"
+      new: 
