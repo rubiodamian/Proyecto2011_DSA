@@ -3,7 +3,7 @@ Proyecto2011_DSA
 
 Instalacion
 ------------
-- Primero crear una carpeta donde clonar el proyecto, en este ejemplo se llamara PROYECTO/:
+- Primero crear una carpeta donde clonar el proyecto, en este ejemplo se llamara PROYECTO/.
 - Luego, far permisos a las carpetas cache/ y log/:
     chmod 777 cache/ log/
 - Configurar el servidor virtual:
