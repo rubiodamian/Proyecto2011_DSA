@@ -5,7 +5,9 @@ Instalacion
 ------------
 - Primero crear una carpeta donde clonar el proyecto, en este ejemplo se llamara PROYECTO/.
 - Luego, far permisos a las carpetas cache/ y log/:
+    
     chmod 777 cache/ log/
+
 - Configurar el servidor virtual:
     
         # Be sure to only have this line once in your configuration
