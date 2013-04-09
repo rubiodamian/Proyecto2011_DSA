@@ -33,8 +33,12 @@ Instalacion
             Require all granted
           </Directory>
           
- -checkear la conf de symfony:
- 
-    php lib/vendor/symfony/data/bin/check_configuration.php
-    
-    nota: en caso de encontrar errores -> http://igushiken.wordpress.com/2011/02/16/how-to-install-apache-php5-and-symfony-on-ubuntu/
+ - Checkear la conf de symfony:
+                
+                php lib/vendor/symfony/data/bin/check_configuration.php
+     nota: en caso de encontrar errores -> http://igushiken.wordpress.com/2011/02/16/how-to-install-apache-php5-and-symfony-on-ubuntu/
+     
+- Crear una base de datos llamada 'grupo104' y asignar un usuario con el mismo nombre y contraseña 'Z_p_h75p' 
+- Ejecutar:
+
+        ./symfony doctrine:build --all --and-load
