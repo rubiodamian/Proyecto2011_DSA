@@ -1,0 +1,7 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: mysql:host=localhost;dbname=grupo104
+      username: grupo104
+      password: Z_p_h75p

@@ -1,9 +1,8 @@
 cache/*
 log/*
 web/uploads/*
-config/databases.yml
-config/propel.ini
 data/sql/*
+data/podcast.index/
 lib/filter/doctrine/base/Base*
 lib/filter/doctrine/*Plugin/base/Base*
 lib/form/doctrine/base/Base*
