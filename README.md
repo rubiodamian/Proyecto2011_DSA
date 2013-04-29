@@ -4,7 +4,18 @@ Proyecto2011_DSA
 Instalacion
 ------------
 - Primero crear una carpeta donde clonar el proyecto, en este ejemplo se llamara PROYECTO/.
-- Luego, far permisos a las carpetas cache/ y log/:
+- Crear la carpeta lib/vendor
+- Descargar symfony 1.4
+
+                http://pear.symfony-project.com/get/symfony-1.4.20.tgz
+-Descomprimirlo en la carpeta lib/vendor
+
+                $ cd lib/vendor
+                $ tar zxpf symfony-1.4.20.tgz
+                $ mv symfony-1.4.20 symfony
+                $ rm symfony-1.4.20.tgz
+
+- Luego, dar permisos a las carpetas cache/ y log/:
                 
         chmod 777 cache/ log/
 
