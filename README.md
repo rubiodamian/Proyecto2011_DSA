@@ -32,6 +32,7 @@ Instalacion
             Allow from All
             Require all granted
           </Directory>
+        </VirtualHost>
           
  - Checkear la conf de symfony:
                 
